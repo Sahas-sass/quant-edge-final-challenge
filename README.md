@@ -31,9 +31,11 @@ streamlit run src/app.py
 ```bash
 python run_all.py
 ```
-*Executes all 5 quantitative layers, calibrates models, runs out-of-sample backtests, and compiles:*
+*Executes all 5 quantitative layers, calibrates models, runs out-of-sample backtests, and compiles all competition deliverables in ~7 seconds:*
 1. **1-Page Executive Tear Sheet PDF**: `output/tear_sheet/Serendib_Endowment_Executive_Tear_Sheet.pdf`
 2. **13-Page Technical Investment Memo PDF**: `output/report/Serendib_Endowment_Investment_Memo.pdf`
+3. **12-Slide 16:9 Presentation Pitch Deck PDF**: `output/presentation/Serendib_Endowment_Pitch_Deck.pdf`
+4. **10–12 Minute Live Pitch Speech & Defense Script**: `PITCH_SCRIPT_AND_DEFENSE.md`
 
 ---
 

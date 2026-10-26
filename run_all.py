@@ -27,6 +27,7 @@ from stress_engine import (
 )
 from generate_tear_sheet import build_executive_tear_sheet
 from generate_memo import build_technical_memo
+from generate_pitch_deck import build_pitch_deck
 
 
 def main():
@@ -76,12 +77,15 @@ def main():
     print("\n[Step 6/6] Compiling Publication Deliverables...")
     build_executive_tear_sheet()
     build_technical_memo()
+    build_pitch_deck()
 
     elapsed = time.time() - t0
     print("\n" + "=" * 80)
     print(f"PIPELINE COMPLETED SUCCESSFULLY IN {elapsed:.2f} SECONDS.")
     print(f"1. Executive Tear Sheet PDF: Round_2_Final_Challenge/output/tear_sheet/Serendib_Endowment_Executive_Tear_Sheet.pdf (1 Page)")
     print(f"2. Technical Report/Memo PDF: Round_2_Final_Challenge/output/report/Serendib_Endowment_Investment_Memo.pdf (13 Pages)")
+    print(f"3. Live Pitch Deck PDF: Round_2_Final_Challenge/output/presentation/Serendib_Endowment_Pitch_Deck.pdf (12 Slides, 16:9)")
+    print(f"4. Presentation Speech & Defense Script: Round_2_Final_Challenge/PITCH_SCRIPT_AND_DEFENSE.md")
     print(f"\nTo launch the interactive Streamlit dashboard, run:")
     print(f"   streamlit run Round_2_Final_Challenge/src/app.py")
     print("=" * 80)

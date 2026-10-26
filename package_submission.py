@@ -14,6 +14,7 @@ INCLUDED_ITEMS = [
     "run_all.py",
     "requirements.txt",
     "README.md",
+    "PITCH_SCRIPT_AND_DEFENSE.md",
     ".gitignore",
     "data",
     "src",
