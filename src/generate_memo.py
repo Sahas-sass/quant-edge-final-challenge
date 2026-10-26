@@ -149,11 +149,11 @@ def build_technical_memo():
     # =========================================================================
     # PAGE 1: COVER & EXECUTIVE SUMMARY
     # =========================================================================
-    story.append(Spacer(1, 15))
-    story.append(Paragraph("QUANTEDGE 1.0 FINAL CHALLENGE &mdash; COMPETITION BRIEFING", ParagraphStyle("CoverSuper", fontName="Helvetica-Bold", fontSize=11, textColor=colors.HexColor("#C53030"), leading=13, spaceAfter=6)))
+    story.append(Spacer(1, 6))
+    story.append(Paragraph("QUANTEDGE 1.0 FINAL CHALLENGE &mdash; COMPETITION BRIEFING", ParagraphStyle("CoverSuper", fontName="Helvetica-Bold", fontSize=11, textColor=colors.HexColor("#C53030"), leading=13, spaceAfter=4)))
     story.append(Paragraph("Quantitative Portfolio Construction, Extreme Value Theory & Multi-Layer Risk Defense", title_style))
     story.append(Paragraph("Institutional Investment Memorandum for The Serendib University Endowment Fund (USD 10 Million Mandate)", subtitle_style))
-    story.append(HRFlowable(width="100%", thickness=1.5, color=colors.HexColor("#3182CE"), spaceBefore=2, spaceAfter=14))
+    story.append(HRFlowable(width="100%", thickness=1.5, color=colors.HexColor("#3182CE"), spaceBefore=1, spaceAfter=8))
 
     meta_table_data = [
         [Paragraph("<b>Institutional Client:</b>", body_style), Paragraph("The Serendib University Endowment Fund ($10,000,000 USD Mandate)", body_style)],
@@ -162,19 +162,21 @@ def build_technical_memo():
         [Paragraph("<b>Investable Universe:</b>", body_style), Paragraph("7 ETFs: SPY (US Equities), EFA (Dev ex-US), EEM (Emerging), AGG (US Bonds), GLD (Gold), XLE (Energy), XLK (Tech)", body_style)],
         [Paragraph("<b>Core Methodology:</b>", body_style), Paragraph("Markowitz MPT + 3 VaR Models + Expected Shortfall (CVaR) + Extreme Value Theory (EVT/POT) + Backtesting", body_style)],
         [Paragraph("<b>Recommendation:</b>", body_style), Paragraph("<b>ACCEPT MANDATE WITH EVT TAIL BUFFERS</b> (40% AGG, 20% SPY, 15% GLD, 10% EFA, 5% XLE, 5% XLK, 5% EEM)", body_style)],
+        [Paragraph("<b>Live Cloud App:</b>", body_style), Paragraph("<a href='https://quant-edge-final-challenge-vnzkxsfkkownmkpp62jboj.streamlit.app/' color='#2B6CB0'><u>quant-edge-final-challenge-vnzkxsfkkownmkpp62jboj.streamlit.app</u></a> (Interactive Engine)", body_style)],
+        [Paragraph("<b>Code Repository:</b>", body_style), Paragraph("<a href='https://github.com/Sahas-sass/quant-edge-final-challenge' color='#2B6CB0'><u>github.com/Sahas-sass/quant-edge-final-challenge</u></a> (Full Source & Datasets)", body_style)],
     ]
     t_meta = Table(meta_table_data, colWidths=[120, 380])
     t_meta.setStyle(TableStyle([
         ('BACKGROUND', (0,0), (-1,-1), colors.HexColor("#F8FAFC")),
         ('BOX', (0,0), (-1,-1), 1, colors.HexColor("#CBD5E0")),
         ('INNERGRID', (0,0), (-1,-1), 0.5, colors.HexColor("#E2E8F0")),
-        ('TOPPADDING', (0,0), (-1,-1), 4),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 4),
+        ('TOPPADDING', (0,0), (-1,-1), 2.5),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 2.5),
         ('LEFTPADDING', (0,0), (-1,-1), 8),
         ('RIGHTPADDING', (0,0), (-1,-1), 8),
     ]))
     story.append(t_meta)
-    story.append(Spacer(1, 14))
+    story.append(Spacer(1, 8))
 
     exec_box = [
         [Paragraph("<b>EXECUTIVE SUMMARY & MANDATE DEFENSE</b>", ParagraphStyle("EST", fontName="Helvetica-Bold", fontSize=9.5, textColor=colors.HexColor("#2C5282"), spaceAfter=4))],
@@ -732,7 +734,9 @@ def build_technical_memo():
         [Paragraph("<b>AI Tool(s) Used</b>", t_cell_bold), Paragraph("Google Antigravity / Gemini 3.8 Flash High coding assistant.", t_cell_style)],
         [Paragraph("<b>Specific Purpose</b>", t_cell_bold), Paragraph("Code scaffolding, syntax acceleration, Streamlit layout formatting, and ReportLab PDF compilation support.", t_cell_style)],
         [Paragraph("<b>Human Validation</b>", t_cell_bold), Paragraph("All mathematical derivations (GPD, MPT, Kupiec POF), statistical calculations, asset weights, and investment recommendations were independently reviewed, audited, and tested by team members.", t_cell_style)],
-        [Paragraph("<b>Material Components</b>", t_cell_bold), Paragraph("Initial Streamlit dashboard layout was AI-assisted; risk engine calculations, EVT fitting, backtest algorithms, and committee conclusions were independently verified and validated.", t_cell_style)]
+        [Paragraph("<b>Material Components</b>", t_cell_bold), Paragraph("Initial Streamlit dashboard layout was AI-assisted; risk engine calculations, EVT fitting, backtest algorithms, and committee conclusions were independently verified and validated.", t_cell_style)],
+        [Paragraph("<b>Live Cloud App</b>", t_cell_bold), Paragraph("<a href='https://quant-edge-final-challenge-vnzkxsfkkownmkpp62jboj.streamlit.app/' color='#2B6CB0'><u>https://quant-edge-final-challenge-vnzkxsfkkownmkpp62jboj.streamlit.app/</u></a>", t_cell_style)],
+        [Paragraph("<b>Code Repository</b>", t_cell_bold), Paragraph("<a href='https://github.com/Sahas-sass/quant-edge-final-challenge' color='#2B6CB0'><u>https://github.com/Sahas-sass/quant-edge-final-challenge</u></a>", t_cell_style)]
     ]
     t_ai = Table(t_ai_data, colWidths=[130, 370])
     t_ai.setStyle(TableStyle([

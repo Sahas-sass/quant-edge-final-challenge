@@ -8,9 +8,20 @@
 
 ---
 
+## 🌐 Live Application & Repository Links
+
+* **🚀 Live Streamlit Web Application**: [https://quant-edge-final-challenge-vnzkxsfkkownmkpp62jboj.streamlit.app/](https://quant-edge-final-challenge-vnzkxsfkkownmkpp62jboj.streamlit.app/)
+* **💻 Official GitHub Repository**: [https://github.com/Sahas-sass/quant-edge-final-challenge](https://github.com/Sahas-sass/quant-edge-final-challenge)
+
+---
+
 ## 1. Quickstart & One-Command Execution
 
-### A. Launch the Production Streamlit Interactive Dashboard
+### A. Access the Live Web Application
+You can access and interact with the production application immediately via your browser:  
+👉 **[Open Live Dashboard](https://quant-edge-final-challenge-vnzkxsfkkownmkpp62jboj.streamlit.app/)**
+
+Or launch locally:
 ```bash
 streamlit run src/app.py
 ```

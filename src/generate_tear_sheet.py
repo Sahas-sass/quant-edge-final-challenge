@@ -50,12 +50,16 @@ def build_executive_tear_sheet():
         textColor=colors.HexColor("#0F2942"), spaceAfter=2
     )
     subtitle_style = ParagraphStyle(
-        "TearSubtitle", fontName="Helvetica", fontSize=9, leading=12,
-        textColor=colors.HexColor("#2B6CB0"), spaceAfter=8
+        "TearSubtitle", fontName="Helvetica", fontSize=8.5, leading=11,
+        textColor=colors.HexColor("#2B6CB0"), spaceAfter=3
+    )
+    links_style = ParagraphStyle(
+        "TearLinks", fontName="Helvetica", fontSize=7.0, leading=9.5,
+        textColor=colors.HexColor("#4A5568"), spaceAfter=4
     )
     section_h_style = ParagraphStyle(
-        "SectionHeader", fontName="Helvetica-Bold", fontSize=9.5, leading=12,
-        textColor=colors.HexColor("#1A365D"), spaceBefore=5, spaceAfter=4
+        "SectionHeader", fontName="Helvetica-Bold", fontSize=9.0, leading=11.5,
+        textColor=colors.HexColor("#1A365D"), spaceBefore=4, spaceAfter=3
     )
     body_style = ParagraphStyle(
         "BodyTextCustom", fontName="Helvetica", fontSize=7.5, leading=10,
@@ -85,7 +89,8 @@ def build_executive_tear_sheet():
     # Title & Metadata Header
     story.append(Paragraph("THE SERENDIB UNIVERSITY ENDOWMENT FUND &mdash; EXECUTIVE TEAR SHEET", title_style))
     story.append(Paragraph("USD 10 Million Investment Mandate Defense | Quantitative Risk & Extreme Value Theory Engine", subtitle_style))
-    story.append(HRFlowable(width="100%", thickness=1.5, color=colors.HexColor("#2B6CB0"), spaceBefore=0, spaceAfter=6))
+    story.append(Paragraph("<b>Live Cloud App:</b> <a href='https://quant-edge-final-challenge-vnzkxsfkkownmkpp62jboj.streamlit.app/' color='#1D4ED8'><u>quant-edge-final-challenge-vnzkxsfkkownmkpp62jboj.streamlit.app</u></a> &nbsp;&bull;&nbsp; <b>Code Repository:</b> <a href='https://github.com/Sahas-sass/quant-edge-final-challenge' color='#1D4ED8'><u>github.com/Sahas-sass/quant-edge-final-challenge</u></a>", links_style))
+    story.append(HRFlowable(width="100%", thickness=1.5, color=colors.HexColor("#2B6CB0"), spaceBefore=0, spaceAfter=4))
 
     # 1. Mandate Recommendation Callout Box
     rec_box_data = [
